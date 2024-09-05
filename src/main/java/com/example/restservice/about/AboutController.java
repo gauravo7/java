@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AboutController {
 
 	@GetMapping("/about")
-	public About about() {
+	public About about(@RequestParam(value = "name", defaultValue = "World") String name) {
 		return new About(200,"<h2>This is About Page Content</h2>",True);
 	}
 }
